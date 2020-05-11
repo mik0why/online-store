@@ -1,4 +1,4 @@
-package springDemo;
+package company.myCompany.executable;
 
 public interface Customer {
 
