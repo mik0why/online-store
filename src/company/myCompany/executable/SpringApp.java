@@ -5,9 +5,6 @@ package company.myCompany.executable;
 import org.springframework.context.support.ClassPathXmlApplicationContext; 
 
 public class SpringApp {
-
-	
-	
 	
 	public static void main (String [] args) {
 		// load the config file
@@ -15,14 +12,15 @@ public class SpringApp {
 				new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// retrieve the bean from container
-	Customer firstCustomer = context.getBean("myCustomer", Customer.class);
-	
-	
+		// the id is specified by the user
+	String id = "myCustomer"; 
+	Customer firstCustomer = context.getBean(id, Customer.class);
+		
 		// call methods on the bean
-	System.out.println(firstCustomer.getType());
+	System.out.println(firstCustomer.getType()); 
+	System.out.println(firstCustomer.getFeedback()); 
 	
-	
-		// close the context
+	 	// close the context
 	
 	context.close(); 
 	

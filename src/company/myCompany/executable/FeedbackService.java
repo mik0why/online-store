@@ -1,8 +1,6 @@
 package company.myCompany.executable;
 
-public interface Customer {
+public interface FeedbackService {
 
-	public String getType();
 	public String getFeedback(); 
-	
 }
