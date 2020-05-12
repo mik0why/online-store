@@ -8,7 +8,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- Define your beans here -->
-    <bean id = "myCustomer" class = "springDemo.RegularCustomer">
+    <bean id = "myCustomer" class = "company.myCompany.executable.RegularCustomer">
     </bean>
     
 </beans>
