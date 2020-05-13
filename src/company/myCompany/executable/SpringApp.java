@@ -21,7 +21,11 @@ public class SpringApp {
 	System.out.println(firstCustomer.getType()); 
 	System.out.println(firstCustomer.getFeedback()); 
 	System.out.println(firstCustomer.getEmailAddress()); 
-	System.out.println(firstCustomer.getLocation());
+	if(firstCustomer.getLocation().contains("Barcelona")){
+		System.out.println("Spain");
+	}else {
+		System.out.println("Not Spain");
+	}
 	
 	//firstCustomer.getLocation(); 
 	 	// close the context
