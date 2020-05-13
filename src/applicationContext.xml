@@ -7,6 +7,9 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<!--  loading the properties file -->
+    <context:property-placeholder location =  "classpath:details.properties"/>
+    
     <!-- Define your beans here -->
     
         <bean id = "feedbackProvider" class = "company.myCompany.executable.FeedbackProvider">
@@ -23,7 +26,11 @@
     <!--  setter injection -->
     <bean id = "upgradedCustomer" class = "company.myCompany.executable.UpgradedCustomer">
     	<property name = "service" ref = "feedbackProvider"></property>
+    	<property name = "emailAddress" value = "${foo.email}"/>
+    	<property name = "location" value = "${foo.location}" />
     </bean>
+    
+    
 
     
 </beans>

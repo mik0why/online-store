@@ -3,16 +3,31 @@ package company.myCompany.executable;
 public class UpgradedCustomer implements Customer {
 
 	private FeedbackService service; 
+	private String emailAddress; 
+	private String location; 
 	
 	
 	public UpgradedCustomer() {
-		System.out.println("no arg constructor");
 	}
 	
 
-	public void setService(FeedbackService service) {
-		System.out.println("setting service");
-		this.service = service;
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+
+
+	public String getLocation() {
+		return location;
+	}
+
+
+	public void setLocation(String location) {
+		this.location = location;
 	}
 
  
@@ -24,6 +39,10 @@ public class UpgradedCustomer implements Customer {
 	@Override
 	public String getFeedback() {
 		return service.getFeedback(); 
+	}
+	
+	public void setService(FeedbackService service) {
+		this.service = service;
 	}
 
 }
