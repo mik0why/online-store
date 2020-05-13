@@ -12,10 +12,18 @@
         <bean id = "feedbackProvider" class = "company.myCompany.executable.FeedbackProvider">
     </bean>
     
-    <bean id = "myCustomer" class = "company.myCompany.executable.RegularCustomer">
+    <bean id = "regularCustomer" class = "company.myCompany.executable.RegularCustomer">
     	<constructor-arg ref = "feedbackProvider" />   
     </bean>
     
+    <bean id = "premiumCustomer" class = "company.myCompany.executable.PremiumCustomer">
+    	<constructor-arg ref = "feedbackProvider" /> 
+    </bean>
+    
+    <!--  setter injection -->
+    <bean id = "upgradedCustomer" class = "company.myCompany.executable.UpgradedCustomer">
+    	<property name = "service" ref = "feedbackProvider"></property>
+    </bean>
 
     
 </beans>

@@ -13,7 +13,7 @@ public class SpringApp {
 		
 		// retrieve the bean from container
 		// the id is specified by the user
-	String id = "myCustomer"; 
+	String id = "upgradedCustomer"; 
 	Customer firstCustomer = context.getBean(id, Customer.class);
 		
 		// call methods on the bean
