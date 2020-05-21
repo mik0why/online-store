@@ -13,11 +13,15 @@
         <bean id = "feedbackProvider" class = "company.myCompany.executable.FeedbackProvider">
     </bean>
     
-    <bean id = "regularCustomer" class = "company.myCompany.executable.RegularCustomer">
+    <bean id = "regularCustomer" class = "company.myCompany.executable.RegularCustomer"
+    init-method = "setupMethod" 
+    destroy-method = "cleanupMethod">
     	<constructor-arg ref = "feedbackProvider" />   
     </bean>
     
-
+    <bean id = "premiumCustomer" class = "company.myCompany.executable.PremiumCustomer">
+    	<constructor-arg ref = "feedbackProvider" />   
+    </bean>
 
     
     

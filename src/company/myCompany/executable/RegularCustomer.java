@@ -19,6 +19,15 @@ public class RegularCustomer implements Customer{
 		return feedbackService.getFeedback(); 
 	}
 
+	//init method
+	public void setupMethod() {
+		System.out.println("bean setup");
+	}
+	
+	//destroy method
+	public void cleanupMethod() {
+		System.out.println("Bean cleanup");
+	}
 
 }
  
