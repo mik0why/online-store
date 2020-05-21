@@ -1,12 +1,13 @@
 package company.myCompany.executable;
 
+import org.springframework.stereotype.Component;
+
+@Component("premCust")
 public class PremiumCustomer implements Customer {
 
-	private FeedbackService feedbackService; //interface
+//	private FeedbackService feedbackService; //interface
 	
-	public PremiumCustomer(FeedbackService service) {
-		feedbackService = service; 
-	}
+
 	
 	@Override
 	public String getType() {
@@ -16,7 +17,7 @@ public class PremiumCustomer implements Customer {
 
 	@Override
 	public String getFeedback() {
-		return feedbackService.getFeedback(); 
+		return "satisfied"; 
 	}
 			
 }

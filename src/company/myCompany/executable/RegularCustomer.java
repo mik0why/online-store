@@ -1,11 +1,28 @@
 package company.myCompany.executable;
 
+import org.springframework.stereotype.Component;
+
+@Component("regCust")
 public class RegularCustomer implements Customer{
 	
-	private FeedbackService feedbackService; 
+//	private FeedbackService feedbackService;
+
+	@Override
+	public String getType() {
+		return "regularCustomer";
+	}
+
+	@Override
+	public String getFeedback() {
+		return "merely satisfied."; 
+	} 
 	
 	// add no param constructor?
 	
+
+}
+	
+	/*
 	public RegularCustomer(FeedbackService service) {
 		feedbackService = service;  
 	}
@@ -28,6 +45,7 @@ public class RegularCustomer implements Customer{
 	public void cleanupMethod() {
 		System.out.println("Bean cleanup");
 	}
+	*/
 
-}
+
  
