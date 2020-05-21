@@ -15,7 +15,8 @@
     
     <bean id = "regularCustomer" class = "company.myCompany.executable.RegularCustomer"
     init-method = "setupMethod" 
-    destroy-method = "cleanupMethod">
+    destroy-method = "cleanupMethod"
+    scope = "prototype">
     	<constructor-arg ref = "feedbackProvider" />   
     </bean>
     
