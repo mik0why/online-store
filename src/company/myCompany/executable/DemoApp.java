@@ -10,12 +10,18 @@ public class DemoApp {
 		ClassPathXmlApplicationContext context 
 			= new ClassPathXmlApplicationContext("appContext.xml");
 		
+		//write to the config file
+		
+		//retrieve the bean based on the type of the user
+		
+		
 		// get the bean from spring container
-		Customer customer = context.getBean("regCust", Customer.class);
-		Customer custTwo = context.getBean("premCust", Customer.class);
+		Customer customer = context.getBean("regularCustomer", Customer.class);
+		Customer custTwo = context.getBean("premiumCustomer", Customer.class);
 		
 		// call a method on the bean
 		System.out.println(customer.getFeedback());
+		System.out.println(customer.getType());
 		System.out.println(custTwo.getFeedback());
 		
 		

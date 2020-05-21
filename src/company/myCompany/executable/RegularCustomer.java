@@ -2,7 +2,7 @@ package company.myCompany.executable;
 
 import org.springframework.stereotype.Component;
 
-@Component("regCust")
+@Component
 public class RegularCustomer implements Customer{
 	
 //	private FeedbackService feedbackService;

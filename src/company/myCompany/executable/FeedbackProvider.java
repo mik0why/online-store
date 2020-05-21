@@ -1,6 +1,10 @@
 package company.myCompany.executable;
 
-import java.util.Random; 
+import java.util.Random;
+
+import org.springframework.stereotype.Component; 
+
+@Component
 public class FeedbackProvider implements FeedbackService{
 
 	@Override
