@@ -18,7 +18,7 @@ public class DemoApp {
 		// get the bean from spring container
 		Customer customer = context.getBean("regularCustomer", Customer.class);
 		Customer custTwo = context.getBean("premiumCustomer", Customer.class);
-		
+		Customer custThree = context.getBean("premiumCustomer", Customer.class);
 		// call a method on the bean
 		System.out.println(customer.getFeedback());
 		System.out.println(customer.getType());

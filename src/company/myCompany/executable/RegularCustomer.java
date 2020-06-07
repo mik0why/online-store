@@ -1,12 +1,18 @@
 package company.myCompany.executable;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class RegularCustomer implements Customer{
 	
-//	private FeedbackService feedbackService;
+	private FeedbackService feedbackService;
 
+	@Autowired
+	public RegularCustomer(FeedbackService service) {
+		feedbackService = service; 
+	}
+	
 	@Override
 	public String getType() {
 		return "regularCustomer";
@@ -14,7 +20,7 @@ public class RegularCustomer implements Customer{
 
 	@Override
 	public String getFeedback() {
-		return "merely satisfied."; 
+		return feedbackService.getFeedback();
 	} 
 	
 	// add no param constructor?

@@ -22,7 +22,7 @@ public class PremiumCustomer implements Customer {
 
 	@Override
 	public String getFeedback() {
-		return "satisfied"; 
+		return feedbackService.getFeedback();
 	}
 			
 }
